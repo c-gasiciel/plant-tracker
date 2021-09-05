@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'components/centered_placeholder.dart';
 
 class MainScreen extends StatelessWidget{
   //Define attributes
@@ -12,9 +13,7 @@ class MainScreen extends StatelessWidget{
   Widget build(BuildContext context){  
     return Scaffold(
       appBar: AppBar(title: Text(title)),
-      body: Center(
-        child: Text(title, style: Theme.of(context).textTheme.headline5)
-      )//Center
+      body: CenteredPlaceholder()
     );//Scaffold
   }
 }
