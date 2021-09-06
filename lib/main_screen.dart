@@ -21,20 +21,28 @@ class MainScreen extends StatelessWidget{
       appBar: AppBar(title: Text(title)),
       body: Column(
         children: [
-          paddedText(8.0, 'Date'),
-          CenteredPlaceholder(padding: 20),
-          paddedText(8.0, 'You have XX plants'),
-          paddedText(8.0, 'XX might be thirsty'),
-          paddedText(8.0, 'XX might be hungry'),
+          paddedText(context, 20.0, 'Date'),
+          CenteredPlaceholder(padding: 5),
+          headerText(context, 15.0, 'You have XX plants'),
+          paddedText(context, 8.0, 'XX might be thirsty'),
+          paddedText(context, 8.0, 'XX might be hungry'),
         ],
       )
     );//Scaffold
   }
 
-  Widget paddedText(double padding, String text){ 
+  Widget headerText(BuildContext context, double padding, String text){
     return Padding(
       padding: EdgeInsets.all(padding),
-      child: Text(text),
+      child: Text(text,
+            style: Theme.of(context).textTheme.headline5,)
+    );
+  }
+
+  Widget paddedText(BuildContext context, double padding, String text){ 
+    return Padding(
+      padding: EdgeInsets.all(padding),
+      child: Text(text)
     );
   }
 }
