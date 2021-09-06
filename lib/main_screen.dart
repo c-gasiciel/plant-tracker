@@ -21,13 +21,20 @@ class MainScreen extends StatelessWidget{
       appBar: AppBar(title: Text(title)),
       body: Column(
         children: [
-          Text('Date'),
-          CenteredPlaceholder(padding: 10),
-          Text('You have XX plants'),
-          Text('XX might be thirsty'),
-          Text('XX might be hungry')
+          paddedText(8.0, 'Date'),
+          CenteredPlaceholder(padding: 20),
+          paddedText(8.0, 'You have XX plants'),
+          paddedText(8.0, 'XX might be thirsty'),
+          paddedText(8.0, 'XX might be hungry'),
         ],
       )
     );//Scaffold
+  }
+
+  Widget paddedText(double padding, String text){ 
+    return Padding(
+      padding: EdgeInsets.all(padding),
+      child: Text(text),
+    );
   }
 }
