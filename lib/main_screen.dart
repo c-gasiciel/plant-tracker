@@ -21,7 +21,8 @@ class MainScreen extends StatelessWidget{
       appBar: AppBar(title: Text(title)),
       body: Column(
         children: [
-          paddedText(context, 20.0, 'Date'),
+          SizedBox(height: 20.0),
+          paddedText(context, 25.0, 'Date'),
           CenteredPlaceholder(padding: 5),
           headerText(context, 15.0, 'You have XX plants'),
           paddedText(context, 8.0, 'XX might be thirsty'),
