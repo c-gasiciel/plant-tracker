@@ -1,3 +1,9 @@
+/* *****************************************************************
+** AUTHOR:  Clarissa Gasiciel
+** DATE MODIFIED:  9/4/2021
+** DESCRIPTION:  Basic home screen layout for the app
+***************************************************************** */
+
 import 'package:flutter/material.dart';
 import 'components/centered_placeholder.dart';
 
@@ -13,7 +19,15 @@ class MainScreen extends StatelessWidget{
   Widget build(BuildContext context){  
     return Scaffold(
       appBar: AppBar(title: Text(title)),
-      body: CenteredPlaceholder()
+      body: Column(
+        children: [
+          Text('Date'),
+          CenteredPlaceholder(padding: 10),
+          Text('You have XX plants'),
+          Text('XX might be thirsty'),
+          Text('XX might be hungry')
+        ],
+      )
     );//Scaffold
   }
 }
