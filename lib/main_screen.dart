@@ -5,7 +5,7 @@
 ***************************************************************** */
 
 import 'package:flutter/material.dart';
-import 'components/centered_placeholder.dart';
+import 'components/centered_plant_image.dart';
 
 class MainScreen extends StatelessWidget{
   //Define attributes
@@ -23,7 +23,7 @@ class MainScreen extends StatelessWidget{
         children: [
           SizedBox(height: 20.0),
           paddedText(context, 25.0, 'Date'),
-          CenteredPlaceholder(padding: 5, height: 200, width: 200),
+          CenteredPlantImage(padding: 5, height: 200, width: 200),
           headerText(context, 15.0, 'You have XX plants'),
           paddedText(context, 8.0, 'XX might be thirsty'),
           paddedText(context, 8.0, 'XX might be hungry'),
