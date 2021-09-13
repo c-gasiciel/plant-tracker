@@ -9,8 +9,10 @@ import 'package:flutter/material.dart';
 
 class CenteredPlaceholder extends StatelessWidget {
   final double padding; 
+  final double width;
+  final double height;
   
-  CenteredPlaceholder({Key key, this.padding}) : super (key: key);
+  CenteredPlaceholder({Key key, this.padding, this.width, this.height}) : super (key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,8 +21,8 @@ class CenteredPlaceholder extends StatelessWidget {
           padding: EdgeInsets.all(padding),
           child: SizedBox(
             child: Placeholder(),
-            height: 200,
-            width: 200,
+            height: height,
+            width: width,
             ),
         )
     );//Center
